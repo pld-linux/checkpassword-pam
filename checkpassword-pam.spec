@@ -1,8 +1,8 @@
 Summary:	The uniform PAM password-checking interface
-Summary(pl):	Jednolite miêdzymordzie do hase³ PAM
+Summary(pl):	Jednolity interfejs do sprawdzania hase³ przez PAM
 Name:		checkpassword-pam
 Version:	0.95
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/checkpasswd-pam/%{name}-%{version}.tar.gz
@@ -13,7 +13,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 checkpassword provides a simple, uniform password-checking interface
 to all root applications. It is suitable for use by applications such
-as login, ftpd, and pop3d.
+as login, ftpd, and pop3d. checkpassword-pam uses PAM library to check
+passwords.
 
 There are checkpassword-compatible tools that support alternate
 password databases, secret login names, long passwords, subaccounts,
@@ -23,9 +24,17 @@ of these tools. Several tools have been specifically designed to
 support POP toasters.
 
 %description -l pl
-Jednolite miêdzymordzie do hase³ umo¿liwiaj±ce wspó³dzia³anie z
-bibliotek± PAM, do u¿ycia przez serwery takie jak ftpd, pop3, imapd,
-login.
+checkpassword udostêpnia prosty, jednolity interfejs do sprawdzania
+hase³ we wszystkich aplikacjach z prawami roota. Mo¿e byæ u¿ywany w
+aplikacjach takich jak login, ftpd i pop3d. checkpassword-pam u¿ywa
+biblioteki PAM do sprawdzania hase³.
+
+Dostêpne s± narzêdzia kompatybilne z checkpassword obs³uguj±ce
+alternatywne bazy hase³, ukryte nazwy u¿ytkowników, d³ugie has³a,
+podkonta, has³a jednorazowe, szczegó³owy accounting i wiele innych
+mo¿liwo¶ci. Aplikacje u¿ywaj±ce interfejsu checkpassword bêd± dzia³aæ
+z dowolnym z tych narzêdzi. Kilka narzêdzi zosta³o zaprojektowanych do
+obs³ugi POP.
 
 %prep
 %setup -q
