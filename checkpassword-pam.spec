@@ -5,7 +5,7 @@ Version:	0.99
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://dl.sourceforge.net/sourceforge/checkpasswd-pam/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/checkpasswd-pam/%{name}-%{version}.tar.gz
 # Source0-md5:	47db7b71f281115b030d4947f09f4374
 URL:		http://checkpasswd-pam.sourceforge.net/
 BuildRequires:	pam-devel
