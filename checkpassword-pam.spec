@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	http://belnet.dl.sourceforge.net/sourceforge/checkpasswd-pam/%{name}-%{version}.tar.gz
+# Source0-md5:	cea5686f9508b0605c46a1bbc787dbde
 URL:		http://checkpasswd-pam.sourceforge.net/
 BuildRequires:	pam-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
