@@ -1,12 +1,12 @@
 Summary:	The uniform PAM password-checking interface
 Summary(pl):	Jednolity interfejs do sprawdzania hase³ przez PAM
 Name:		checkpassword-pam
-Version:	0.95
-Release:	2
+Version:	0.96
+Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/sourceforge/checkpasswd-pam/%{name}-%{version}.tar.gz
-# Source0-md5:	cea5686f9508b0605c46a1bbc787dbde
+# Source0-md5:	c42612e79d5759e9bfe7edf6391d9fc1
 URL:		http://checkpasswd-pam.sourceforge.net/
 BuildRequires:	pam-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
