@@ -5,8 +5,9 @@ Version:	0.95
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://belnet.dl.sourceforge.net/sourceforge/checkpasswd-pam/checkpassword-pam-0.95.tar.gz
+Source0:	http://belnet.dl.sourceforge.net/sourceforge/checkpasswd-pam/%{name}-%{version}.tar.gz
 URL:		http://checkpasswd-pam.sourceforge.net/
+BuildRequires:	pam-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,9 +23,9 @@ of these tools. Several tools have been specifically designed to
 support POP toasters.
 
 %description -l pl
-Jednolite miêdzymordzie do hase³  umo¿liwiaj±ce wspó³dzia³anie
-z bibliotek± PAM, do u¿ycia przez serwery takie jak
-ftpd, pop3, imapd, login. 
+Jednolite miêdzymordzie do hase³ umo¿liwiaj±ce wspó³dzia³anie z
+bibliotek± PAM, do u¿ycia przez serwery takie jak ftpd, pop3, imapd,
+login.
 
 %prep
 %setup -q
@@ -44,7 +45,7 @@ install checkpassword-pam.8 $RPM_BUILD_ROOT%{_mandir}/man8
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%doc README
 %defattr(644,root,root,755)
+%doc README
 %attr(755,root,root) %{_bindir}/*
 %attr(644,root,root) %{_mandir}/man8/*
