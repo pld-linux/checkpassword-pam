@@ -2,13 +2,14 @@ Summary:	The uniform PAM password-checking interface
 Summary(pl):	Jednolity interfejs do sprawdzania hase³ przez PAM
 Name:		checkpassword-pam
 Version:	0.99
-Release:	1
+Release:	1.4
 License:	GPL
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/checkpasswd-pam/%{name}-%{version}.tar.gz
 # Source0-md5:	47db7b71f281115b030d4947f09f4374
 URL:		http://checkpasswd-pam.sourceforge.net/
 BuildRequires:	pam-devel
+BuildRequires:	rpmbuild(macros) >= 1.177
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -47,15 +48,27 @@ obs³ugi POP.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8}
-install checkpassword-pam $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_sbindir},%{_mandir}/man8}
+install checkpassword-pam $RPM_BUILD_ROOT%{_sbindir}
+ln -s ../sbin/%{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
 install checkpassword-pam.8 $RPM_BUILD_ROOT%{_mandir}/man8
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%triggerpostun -- %{name} <= 0.99-1
+# TODO: any knowledge which configuration files to automatically "fix"?
+%banner %{name} -e <<EOF
+
+The %{name} binary was moved to %{_sbindir}, please update your
+configuration, as the compatability symlink might dissapear in the
+future!
+
+EOF
+
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc AUTHORS README NEWS
 %attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_sbindir}/*
 %attr(644,root,root) %{_mandir}/man8/*
