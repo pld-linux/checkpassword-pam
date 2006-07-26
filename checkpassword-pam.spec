@@ -71,4 +71,4 @@ EOF
 %doc AUTHORS README NEWS
 %ghost %{_bindir}/*
 %attr(755,root,root) %{_sbindir}/*
-%attr(644,root,root) %{_mandir}/man8/*
+%{_mandir}/man8/*
