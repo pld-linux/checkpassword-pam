@@ -1,5 +1,5 @@
 Summary:	The uniform PAM password-checking interface
-Summary(pl):	Jednolity interfejs do sprawdzania hase³ przez PAM
+Summary(pl.UTF-8):   Jednolity interfejs do sprawdzania haseÅ‚ przez PAM
 Name:		checkpassword-pam
 Version:	0.99
 Release:	2
@@ -25,18 +25,18 @@ Applications that use the checkpassword interface will work with all
 of these tools. Several tools have been specifically designed to
 support POP toasters.
 
-%description -l pl
-checkpassword udostêpnia prosty, jednolity interfejs do sprawdzania
-hase³ we wszystkich aplikacjach z prawami roota. Mo¿e byæ u¿ywany w
-aplikacjach takich jak login, ftpd i pop3d. checkpassword-pam u¿ywa
-biblioteki PAM do sprawdzania hase³.
+%description -l pl.UTF-8
+checkpassword udostÄ™pnia prosty, jednolity interfejs do sprawdzania
+haseÅ‚ we wszystkich aplikacjach z prawami roota. MoÅ¼e byÄ‡ uÅ¼ywany w
+aplikacjach takich jak login, ftpd i pop3d. checkpassword-pam uÅ¼ywa
+biblioteki PAM do sprawdzania haseÅ‚.
 
-Dostêpne s± narzêdzia kompatybilne z checkpassword obs³uguj±ce
-alternatywne bazy hase³, ukryte nazwy u¿ytkowników, d³ugie has³a,
-podkonta, has³a jednorazowe, szczegó³owy accounting i wiele innych
-mo¿liwo¶ci. Aplikacje u¿ywaj±ce interfejsu checkpassword bêd± dzia³aæ
-z dowolnym z tych narzêdzi. Kilka narzêdzi zosta³o zaprojektowanych do
-obs³ugi POP.
+DostÄ™pne sÄ… narzÄ™dzia kompatybilne z checkpassword obsÅ‚ugujÄ…ce
+alternatywne bazy haseÅ‚, ukryte nazwy uÅ¼ytkownikÃ³w, dÅ‚ugie hasÅ‚a,
+podkonta, hasÅ‚a jednorazowe, szczegÃ³Å‚owy accounting i wiele innych
+moÅ¼liwoÅ›ci. Aplikacje uÅ¼ywajÄ…ce interfejsu checkpassword bÄ™dÄ… dziaÅ‚aÄ‡
+z dowolnym z tych narzÄ™dzi. Kilka narzÄ™dzi zostaÅ‚o zaprojektowanych do
+obsÅ‚ugi POP.
 
 %prep
 %setup -q
