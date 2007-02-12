@@ -1,5 +1,5 @@
 Summary:	The uniform PAM password-checking interface
-Summary(pl.UTF-8):   Jednolity interfejs do sprawdzania haseł przez PAM
+Summary(pl.UTF-8):	Jednolity interfejs do sprawdzania haseł przez PAM
 Name:		checkpassword-pam
 Version:	0.99
 Release:	2
